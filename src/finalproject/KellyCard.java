@@ -27,7 +27,7 @@ public class KellyCard extends Square
 		}
 		catch(Exception e)
 		{
-			System.out.println("KellyCard: we have a problem!");
+			System.out.println("KellyCard: error");
 		}
 	}
 

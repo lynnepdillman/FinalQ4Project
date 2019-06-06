@@ -44,7 +44,9 @@ public class MatchingGame extends Canvas implements KeyListener, Runnable
     public MatchingGame()
     {
         keys = new boolean[3];
-        pinkmat = pinks.pMatrix(); 
+        pinkmat = pinks.pMatrix();
+        
+        leaderBoard = new LeaderBoard();
 
         setBackground(Color.white);
         setVisible(true);
@@ -91,7 +93,7 @@ public class MatchingGame extends Canvas implements KeyListener, Runnable
 			graphToBack.drawString("Press F key to flip two cards", 25, 50 );
 //        }
                 
-        if(keys[3] && !isCardFlipped){
+            if(keys[2] && !isCardFlipped){
 			gameStart = true;
 			isCardFlipped = true;
 			ArrayList<Square> twoFlipCard = pinks.rand();
@@ -99,7 +101,7 @@ public class MatchingGame extends Canvas implements KeyListener, Runnable
 			twoFlipCard.get(1).draw(graphToBack);
 		}
             
-            if(keys[1] && isCardFlipped){
+            if(keys[0] && isCardFlipped){
 			isCardFlipped = false;
 			if(!pinks.getTwoFlipCardsPair().get(0).getClass().equals(pinks.getTwoFlipCardsPair().get(1).getClass()))
 			{
@@ -130,7 +132,7 @@ public class MatchingGame extends Canvas implements KeyListener, Runnable
 			
 		}
             
-            if(keys[2] && isCardFlipped){
+            if(keys[1] && isCardFlipped){
 			isCardFlipped = false;
 			if(pinks.getTwoFlipCardsPair().get(0).getClass().equals(pinks.getTwoFlipCardsPair().get(1).getClass()))
 			{
@@ -161,7 +163,7 @@ public class MatchingGame extends Canvas implements KeyListener, Runnable
 			graphToBack.drawString("YOU WIN!", 400, 300);
 		}
 		
-		twoDGraph.drawImage(back, null, 0, 0);
+		//twoDGraph.drawImage(back, null, 0, 0);
     }
 
 
@@ -169,9 +171,9 @@ public class MatchingGame extends Canvas implements KeyListener, Runnable
     {
         switch (toUpperCase(e.getKeyChar()))
         {
-            case 'Y' : keys[1]=true; break;
-            case 'N' : keys[2]=true; break;
-            case 'F' : keys[3]=true; break;
+            case 'Y' : keys[0]=true; break;
+            case 'N' : keys[1]=true; break;
+            case 'F' : keys[2]=true; break;
         }
     repaint();
     }
@@ -180,9 +182,9 @@ public class MatchingGame extends Canvas implements KeyListener, Runnable
     {
         switch (toUpperCase(e.getKeyChar()))
         {
-            case 'Y' : keys[1]=false; break;
-            case 'N' : keys[2]=false; break;
-            case 'F' : keys[3]=false; break; 
+            case 'Y' : keys[0]=false; break;
+            case 'N' : keys[1]=false; break;
+            case 'F' : keys[2]=false; break; 
 	}
         repaint();
     }

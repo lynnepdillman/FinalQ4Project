@@ -10,10 +10,10 @@ import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-
+//taken from Shannon Robinson's Code
 public class LeaderBoard
 {
-    private static int highScore;
+    private static int highScore=0;
     
     public LeaderBoard()
     {
@@ -37,7 +37,7 @@ public class LeaderBoard
     
     public void read() throws IOException, FileNotFoundException
     {
-        Scanner sc = new Scanner(new File("src/highScore.dat"));
+        Scanner sc = new Scanner(new File("\\Users\\dillmanl2093\\Documents\\NetBeansProjects\\MatchGame\\src\\finalproject\\highScore.dat"));
         highScore = sc.nextInt();
     }
     

@@ -27,7 +27,7 @@ public class JimCard extends Square
 		}
 		catch(Exception e)
 		{
-			System.out.println("JimCard: we have a problem!");
+			System.out.println("JimCard: error");
 		}
 	}
 

@@ -27,7 +27,7 @@ public class PamCard extends Square
 		}
 		catch(Exception e)
 		{
-			System.out.println("PamCard: we have a problem!");
+			System.out.println("PamCard: error");
 		}
 	}
 

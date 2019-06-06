@@ -27,7 +27,7 @@ public class MichaelCard extends Square
 		}
 		catch(Exception e)
 		{
-			System.out.println("MichaelCard: we have a problem!");
+			System.out.println("MichaelCard: error");
 		}
 	}
 

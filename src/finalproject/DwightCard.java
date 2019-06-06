@@ -27,7 +27,7 @@ public class DwightCard extends Square
 		}
 		catch(Exception e)
 		{
-			System.out.println("DwightCard: we have a problem!");
+			System.out.println("DwightCard: error");
 		}
 	}
 

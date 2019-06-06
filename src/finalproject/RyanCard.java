@@ -27,7 +27,7 @@ public class RyanCard extends Square
 		}
 		catch(Exception e)
 		{
-			System.out.println("RyanCard: we have a problem!");
+			System.out.println("RyanCard: error");
 		}
 	}
 
